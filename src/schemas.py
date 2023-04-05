@@ -8,9 +8,11 @@ class ContactResponse(BaseModel):
     first_name: str
     last_name: str
     email: EmailStr
-    phone_number: str
+    phone: str
     birthday: date
-    additional_info: Optional[str]
+    other_info: Optional[str]
+    created_at: date
+    updated_at: date
 
     class Config:
         orm_mode = True
